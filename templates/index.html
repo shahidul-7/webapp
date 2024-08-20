@@ -1,0 +1,17 @@
+{%extends "layout.html"%}
+{% block title %}Home Page{% endblock %}
+{%block content%}
+     <div class="container">
+          <div class="main">
+               <h1>Hello World</h1>
+               <p>This is Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus libero, nobis perferendis optio nostrum doloremque veniam esse dolorum, ipsum obcaecati explicabo quisquam nesciunt deleniti consectetur maiores nemo cupiditate voluptatibus? Blanditiis?</p>
+          </div>
+          <div class="contact_form">
+               <form action="/submit" method="POST" target="_blank">
+                    <input type="text" name="Name" placeholder="Please enter your name">
+                    <input type="email" name="Email">
+                    <input type="submit" value="Submit">
+               </form>
+          </div>
+     </div>
+{%endblock%}

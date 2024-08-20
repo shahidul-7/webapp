@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>{% block title %}My Website{% endblock %}</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+     <header>
+          <div class="container">
+            <a href="{{ url_for('home')}}"><h1 class="logo">LOGO HERE</h1></a>
+            <strong><nav>
+              <ul class="menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+              </ul>
+            </nav></strong>
+          </div>
+        </header>
+     <div class="container">
+          {%block content%}
+          {%endblock%}
+     </div>
+
+     <footer>
+      <div class="container">
+        {%block footer%} @All right researved {%endblock%}
+      </div>
+     </footer>
+</body>
+</html>
